@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Performance Analysis</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <h1>Student Performance Tracking System</h1>
+
+    <h2>Student Performance Analysis</h2>
+
+    <form action="/performance" method="POST">
+
+        <label>Student USN:</label><br>
+        <input type="text" name="usn" placeholder="Enter student USN" required><br><br>
+
+        <label>Marks:</label><br>
+        <input type="number" name="marks" min="0" max="100" placeholder="Enter marks" required><br><br>
+
+        <label>Attendance Percentage:</label><br>
+        <input type="number" name="attendance" min="0" max="100" placeholder="Enter attendance percentage" required><br><br>
+
+        <button type="submit">Analyze Performance</button>
+
+    </form>
+
+</body>
+</html>

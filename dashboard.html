@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Performance Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f5fa;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #243b64;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 35px;
+        }
+
+        .card {
+            background: white;
+            width: 220px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #cccccc;
+        }
+
+        .card h2 {
+            color: #356ac3;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 20px;
+            background: #356ac3;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Student Performance Dashboard</h1>
+    <h3>Computer Science and Engineering Department</h3>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>{{ total_students }}</h2>
+            <p>Total Students</p>
+        </div>
+
+        <div class="card">
+            <h2>{{ total_marks }}</h2>
+            <p>Marks Records</p>
+        </div>
+
+        <div class="card">
+            <h2>{{ total_attendance }}</h2>
+            <p>Attendance Records</p>
+        </div>
+
+    </div>
+
+    <a href="/">Home</a>
+    <a href="/students">View Students</a>
+    <a href="/performance">Performance Analysis</a>
+<a href="/ai_prediction">AI Performance Prediction</a>
+</body>
+</html>

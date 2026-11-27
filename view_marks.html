@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <h1>Student Performance Tracking System</h1>
+
+    <h2>Student Marks Details</h2>
+
+    <table border="1" align="center" cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <th>USN</th>
+            <th>Subject</th>
+            <th>Marks</th>
+        </tr>
+
+        {% for mark in marks %}
+        <tr>
+            <td>{{ mark[0] }}</td>
+            <td>{{ mark[1] }}</td>
+            <td>{{ mark[2] }}</td>
+            <td>{{ mark[3] }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <br>
+    <a href="/">Go Back</a>
+
+</body>
+</html>

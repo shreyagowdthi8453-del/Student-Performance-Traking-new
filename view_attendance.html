@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Attendance</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <h1>Student Performance Tracking System</h1>
+
+    <h2>Student Attendance Details</h2>
+
+    <table border="1" align="center" cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <th>USN</th>
+            <th>Total Classes</th>
+            <th>Attended Classes</th>
+            <th>Attendance Percentage</th>
+        </tr>
+
+        {% for item in attendance %}
+        <tr>
+            <td>{{ item[0] }}</td>
+            <td>{{ item[1] }}</td>
+            <td>{{ item[2] }}</td>
+            <td>{{ item[3] }}</td>
+            <td>{{ "%.2f"|format(item[3] / item[2] * 100) }}%</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <br>
+    <a href="/">Go Back</a>
+
+</body>
+</html>

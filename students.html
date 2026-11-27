@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registered Students</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <h1>Student Performance Tracking System</h1>
+
+    <h2>Registered Students</h2>
+
+    <table border="1" align="center" cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>USN</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Semester</th>
+        </tr>
+
+        {% for student in students %}
+        <tr>
+            <td>{{ student[0] }}</td>
+            <td>{{ student[1] }}</td>
+            <td>{{ student[2] }}</td>
+            <td>{{ student[3] }}</td>
+            <td>{{ student[4] }}</td>
+            <td>{{ student[5] }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <br>
+    <a href="/">Go Back</a>
+
+</body>
+</html>
